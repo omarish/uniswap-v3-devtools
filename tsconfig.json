@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es6",
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
     "resolveJsonModule": true,
     "outDir": "dist",
-    "typeRoots": ["./typechain", "./node_modules/@types", "./types"],
-    "types": ["@nomiclabs/hardhat-ethers", "@nomiclabs/hardhat-waffle"],
-    "noImplicitAny": false
+    // "types": ["@nomiclabs/hardhat-ethers", "@nomiclabs/hardhat-waffle"],
+    "noImplicitAny": false,
+    "paths": {
+      "*": ["node_modules/*", "src/types/*"]
+    }
   },
-  "include": ["./test"],
-  "files": ["./hardhat.config.ts"]
+  "include": ["./test"]
+  // "files": ["./hardhat.config.ts"]
 }
